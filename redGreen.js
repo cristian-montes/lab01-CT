@@ -4,9 +4,8 @@ const getName = ({ name}) => {
 
 
 const copyAndPush = (arr, nums) => {
-  const newArr = [...arr];
-  newArr.push(nums);
-  return newArr; 
+  arr.push(nums);
+  return arr; 
 };
 
 export { getName, copyAndPush };
