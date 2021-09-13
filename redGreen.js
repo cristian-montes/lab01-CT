@@ -1,7 +1,13 @@
-const getName = ({ name, age, weight }) => {
-  console.log(name);
+const getName = ({ name}) => {
   return name;
 };
 
-export default getName;
+
+const copyAndPush = (arr, nums) => {
+  const newArr = arr.slice();
+  newArr.push(nums);
+  return newArr; 
+};
+
+export { getName, copyAndPush };
 
