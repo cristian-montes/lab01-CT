@@ -10,17 +10,24 @@ const copyAndPush = (arr, nums) => {
 };
 const stringies = ['caramelo', 'beans', 'dope', 'flowers', 'tacos', 'burritos', 'fabuloso'];
 
+// const capitalizeAndfilter = (arr) => {
+//   const newSD = [];
+//   for(let i = 0; i < arr.length; i++){
+//     const upCase = arr[i].toUpperCase();
+//     newSD.push(upCase);
+//   }
+//   return newSD.filter(word => word[0] === 'F');
+  
+// };
+
 const capitalizeAndfilter = (arr) => {
-  const newSD = [];
-  for(let i = 0; i < arr.length; i++){
-    const upCase = arr[i].toUpperCase();
-    newSD.push(upCase);
-  }
-  const result = newSD.filter(word => word[0] === 'F');
-  console.log(result);
-  return result;
+  const newSD = arr.map(item => item.toUpperCase());
+  return newSD.filter(word => word[0] === 'F');
+    
 };
 
-capitalizeAndfilter(stringies);
+
+
+
 export { getName, copyAndPush, capitalizeAndfilter };
 
