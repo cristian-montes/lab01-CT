@@ -1,6 +1,6 @@
-const getName = (obj) => {
-  console.log(obj.name);
-  return obj.name;
+const getName = ({ name }) => {
+  console.log(name);
+  return name;
 };
 
 export default getName;
