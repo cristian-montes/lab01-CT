@@ -4,7 +4,7 @@ const getName = ({ name}) => {
 
 
 const copyAndPush = (arr, nums) => {
-  const newArr = arr.slice();
+  const newArr = [...arr];
   newArr.push(nums);
   return newArr; 
 };
