@@ -1,4 +1,4 @@
-import { getName, copyAndPush, capitalizeAndfilter } from './redGreen.js';
+import { getName, copyAndPush, capitalizeAndfilter, fetchQuotes }   from './redGreen.js';
 
 // GETTING NAMES FROM OBJECTS
 describe(' get name from object', () => {
@@ -33,5 +33,19 @@ describe('capitalize and filter words', () => {
     const stringies = ['caramelo', 'beans', 'dope', 'flowers', 'tacos', 'burritos', 'fabuloso'];
     const theArr  = capitalizeAndfilter(stringies);
     expect(theArr).toEqual(['FLOWERS', 'FABULOSO']);
+  });
+});
+
+// FETCHING QUOTES FROM FUTURAMA
+describe('fetch quotes', () => {
+
+  it('fetch quotes from futurama', async() => {
+   
+    const theArr  = await fetchQuotes();
+    expect(theArr).toEqual({
+      name:'Bender',
+      text:'I\'m a fraud. A poor, lazy, sexy fraud.',
+      image:'https://res.cloudinary.com/dzxqhkyqd/image/fetch/c_scale,w_500/https://res.cloudinary.com/dzxqhkyqd/image/upload/v1552429540/bender.png'
+    });
   });
 });
