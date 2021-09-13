@@ -39,13 +39,13 @@ describe('capitalize and filter words', () => {
 // FETCHING QUOTES FROM FUTURAMA
 describe('fetch quotes', () => {
 
-  it('fetch quotes from futurama', async() => {
+  it('fetch quotes from futurama', async () => {
    
     const theArr  = await fetchQuotes();
     expect(theArr).toEqual({
-      name:'Bender',
-      text:'I\'m a fraud. A poor, lazy, sexy fraud.',
-      image:'https://res.cloudinary.com/dzxqhkyqd/image/fetch/c_scale,w_500/https://res.cloudinary.com/dzxqhkyqd/image/upload/v1552429540/bender.png'
+      name: expect.any(String),
+      text:expect.any(String),
+      image:expect.any(String)
     });
   });
 });

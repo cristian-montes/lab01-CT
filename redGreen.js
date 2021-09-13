@@ -28,17 +28,14 @@ const fetchData = async () => {
 
 const fetchQuotes = async () => {
   const info = await fetchData();
-  const newInfo = info[0];
-  return  {
-    name: newInfo.character,
-    text: newInfo.quote,
-    image: newInfo.image
-    
+  const numero = Math.floor(Math.random() * info.length);
+  const newinfo = info[numero];
+  return {
+    name: newinfo.character,
+    text: newinfo.quote,
+    image: newinfo.image
   };
 };
-
-
-
 
 export { getName, copyAndPush, capitalizeAndfilter, fetchQuotes };
 
