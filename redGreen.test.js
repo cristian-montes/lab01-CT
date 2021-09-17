@@ -32,7 +32,7 @@ describe('capitalize and filter words', () => {
   it('capitalize and filter words beggening with F', () => {
     const stringies = ['caramelo', 'beans', 'dope', 'flowers', 'tacos', 'burritos', 'fabuloso'];
     const theArr  = capitalizeAndfilter(stringies);
-    expect(theArr).toEqual(['FLOWERS', 'FABULOSO']);
+    expect(theArr).toEqual(['CARAMELO', 'BEANS', 'DOPE', 'TACOS', 'BURRITOS']);
   });
 });
 

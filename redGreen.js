@@ -17,7 +17,7 @@ const copyAndPush = (arr, nums) => {
 // CAPITALIZING AND FILTERING WORDS
 const capitalizeAndfilter = (arr) => {
   const newSD = arr.map(item => item.toUpperCase());
-  return newSD.filter(word => word[0] === 'F');
+  return newSD.filter(word => word[0] != 'F');
     
 };
 
